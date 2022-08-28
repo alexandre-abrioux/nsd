@@ -48,7 +48,7 @@ RUN ./configure \
 RUN cd /builder && tar -czvf /builder.tar.gz *
 
 
-FROM alpine:latest
+FROM alpine:edge
 
 LABEL Maintainer "The-Kube-Way (https://github.com/The-Kube-Way/nsd)"
 
