@@ -31,13 +31,13 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: ghcr.io
-        username: ${{ secrets.GHCR_USERNAME }}
-        password: ${{ secrets.GHCR_TOKEN }}
+        username: alexandre-abrioux
+        password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
       with:
         push: true
         tags: |
-          ghcr.io/the-kube-way/nsd:v${{ env.NSD_VERSION }}
-          ghcr.io/the-kube-way/nsd:latest
+          ghcr.io/alexandre-abrioux/nsd:v${{ env.NSD_VERSION }}
+          ghcr.io/alexandre-abrioux/nsd:latest
